@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{tittle}}</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-white">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand text-success" href="#">Xathe!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+
+    <div class="jumbotron text-dark text-center" style="background-color: rgb(245,245, 220); margin-top: 1%; border-radius: 10px;">
+      <h1 class="display-4">Universidad de Guanajuato</h1>
+      <p class="lead text-center">
+        PARAMETROS DE TIEMPO <br>
+        Fecha = {{Weather["Fecha"]}} <br>
+        Salida del Sol = {{Weather["Nadir"]}} <br>
+        Puesta del sol = {{Weather["Cenit"]}} <br>
+
+
+        ***Los botones por el momento no tienen ninguna acción***
+      </p>
+      <hr class="my-4">
+      <a class="btn btn-primary btn-lg bg-success" href="#" role="button">Learn more</a>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4" style="margin-bottom: 15px;">
+        <div class="card bg-success text-white text-center" style="background-color: rgb(0, 143, 57);">
+          <div class="card-body">
+            <h5 class="card-title" style="font-size: 30px;">Tiempo</h5>
+            <p class="card-text">
+              Humedad = {{Weather["Humedad"]}}% <br>
+              Visibilidad = {{Weather["Visibilidad"]}}m <br>
+              Velocidad del viento = {{Weather["Velocidad"]}} m/s <br>
+              Porcentaje de nubosidad = {{Weather["Nubosidad"]}}% <br>
+            </p>
+            <a href="#" class="btn btn-primary text-dark" style="background-color: rgb(245,245, 220); border-color: rgb(245,245, 220);">Más Info</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4" style="margin-bottom: 15px;">
+        <div class="card  bg-success text-center">
+          <div class="card-body text-white">
+            <h5 class="card-title" style="font-size: 30px;">Presión</h5>
+            <p class="card-text">{{Weather["Presion"]}} hPa</p>
+            <a href="#" class="btn btn-primary text-dark" style="background-color: rgb(245,245, 220); border-color: rgb(245,245, 220);">Más Info</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4" style="margin-bottom: 15px;">
+        <div class="card bg-success  text-white text-center">
+          <div class="card-body">
+            <h5 class="card-title" style="font-size: 30px;">Temperatura</h5>
+            <p class="card-text text-center">
+              {{Weather["Temperatura"]}} ºC<br>
+              {{Weather["Temperatura Maxima"]}} ºC<br>
+              {{Weather["Temperatura Minima"]}} ºC<br>
+            </p>
+            <a href="#" class="btn btn-primary text-dark" style="background-color: rgb(245,245, 220); border-color: rgb(245,245, 220);">Más Info</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+      </div>
+      <div class="col-sm-4" style="margin-bottom: 15px;">
+        <div class="card bg-success text-white text-center">
+          <div class="card-body">
+            <h5 class="card-title" style="font-size: 30px;">Ubicación</h5>
+            <p class="card-text text-center">
+              Ubicación = {{Weather["Pais"]}} <br>
+              Latitud = {{Weather["Latitud"]}} <br>
+              Longitud = {{Weather["Longitud"]}} <br></p>
+            <a href="#" class="btn btn-primary text-dark" style="background-color: rgb(245,245, 220); border-color: rgb(245,245, 220);">Más Info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</html>
+
+<!--
+CLIMA
+ El clima es= Clouds , broken clouds
+
+
+PARAMETROS DE TIEMPO
+ Fecha= Fri Jan 31 
+ Salida del sol= 07:22:19 
+ Puesta del sol= 18:34:19
+-->
